@@ -1,3 +1,5 @@
+phpmyadmin/
+
 app/etc/local.xml
 
 errors/local.xml

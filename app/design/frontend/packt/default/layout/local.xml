@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : local.xml
+    Created on : 26 April, 2016, 10:13 PM
+    Author     : smujawar
+    Description:
+        Purpose of the document follows.
+-->
+
+<layout>
+    <default>
+        <reference name="head">
+            <action method="addJs">
+                <js>jquery/jquery-1.12.3.min.js</js>
+            </action>
+            <action method="addJs">
+                <js>jquery/jquery.noconflict.js</js>
+            </action>
+        </reference>
+    </default>
+</layout>
