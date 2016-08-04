@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<config>
+    <modules>
+        <Packt_Helloworld>
+        	<version>0.0.1</version>        	
+        </Packt_Helloworld>
+    </modules>  
+    <frontend>
+        <routers>
+            <helloworld>
+                <use>standard</use>
+                <args>
+                    <module>Packt_Helloworld</module>
+                    <frontName>helloworld</frontName>
+                </args>
+            </helloworld>
+        </routers>
+        <layout>
+            <updates>
+                <helloworld>
+                    <file>helloworld.xml</file>
+                </helloworld>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <Packt_Helloworld>
+                    <files>
+                        <default>Packt_Helloworld.csv</default>
+                    </files>
+                </Packt_Helloworld>
+            </modules>
+        </translate>
+    </frontend>    
+    <global>
+    	<!--Regestering a block-->
+    	<blocks>
+    		<helloworld>
+    			<class>Packt_Helloworld_Block</class>
+    		</helloworld>
+    	</blocks>
+    	<!--Regestering a Helper-->    
+    	<helpers>
+    		<helloworld>
+    			<class>Packt_Helloworld_Helper</class>
+    		</helloworld>
+    	</helpers>    
+     	<!--Regestering a Model-->    
+    	<models>
+    		<helloworld>
+    			<class>Packt_Helloworld_Model</class>
+    		</helloworld>
+            <catalog>
+                <rewrite>
+                    <product>Packt_Helloworld_Model_Catalog_Product</product>
+                </rewrite>
+            </catalog>
+    	</models> 
+    </global>     
+</config>
