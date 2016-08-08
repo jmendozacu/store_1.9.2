@@ -54,12 +54,38 @@ and open the template in the editor.
     	<models>
     		<helloworld>
     			<class>Packt_Helloworld_Model</class>
+                <!-- Linking the normal model with resource model -->
+                <resourceModel>helloworld_resource</resourceModel>
     		</helloworld>
+            <!-- Overriding the Core class -->
             <catalog>
                 <rewrite>
                     <product>Packt_Helloworld_Model_Catalog_Product</product>
                 </rewrite>
             </catalog>
+            <!-- Registering the resource model, it is used to connect entities to the database -->
+            <helloworld_resource>
+                <class>Packt_Helloworld_Model_Resource</class>
+            </helloworld_resource>
     	</models> 
+        <!-- Registering read and write connection -->
+        <resources>
+            <connection>
+                    <use>core_write</use>
+            </connection>
+            <connection>
+                    <use>core_read</use>
+            </connection>
+            <!-- Installing and upgrading scripts, demo to add an attribute to all products -->
+            <helloworld_setup>
+                <setup>
+                    <module>Packt_Helloworld</module>
+                    <class>Mage_Eav_Model_Entity_Setup</class>
+                </setup>                
+                <connection>
+                    <use>core_setup</use>                    
+                </connection>
+            </helloworld_setup>
+        </resources>
     </global>     
 </config>
