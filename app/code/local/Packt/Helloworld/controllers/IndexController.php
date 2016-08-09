@@ -33,19 +33,4 @@ class Packt_Helloworld_IndexController extends Mage_Core_Controller_Front_Action
 	{
 		$this->loadLayout()->renderLayout();
 	}
-
-
-	public function subscriptionAction() {
-
-		$subscription = Mage::getModel('helloworld/subscription');
-
-		$subscription->setFirstname('John');
-		$subscription->setLastname('Doe');
-		$subscription->setEmail('john.doe@example.com');
-		$subscription->setMessage('A short message to test');
-
-		$subscription->save();
-
-		echo 'success';
-	}
 }
