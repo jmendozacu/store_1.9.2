@@ -7,7 +7,7 @@ and open the template in the editor.
 <config>
     <modules>
         <Packt_Helloworld>
-        	<version>0.0.1</version>        	
+        	<version>0.0.2</version>        	
         </Packt_Helloworld>
     </modules>  
     <frontend>
@@ -66,6 +66,12 @@ and open the template in the editor.
             <!-- Registering the resource model, it is used to connect entities to the database -->
             <helloworld_resource>
                 <class>Packt_Helloworld_Model_Resource</class>
+                <!-- Creating a flat table model -->
+                <entities>
+                    <subscription>
+                        <table>helloworld_subscription</table>
+                    </subscription>
+                </entities>
             </helloworld_resource>
     	</models> 
         <!-- Registering read and write connection -->
